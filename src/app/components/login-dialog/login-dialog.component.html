@@ -1,0 +1,28 @@
+<div class="container">
+  <img
+    src="../../../assets/images/add.png"
+    alt="exit photo"
+    class="exit"
+    (click)="toggleLoginDialog()"
+  />
+  <p class="main-text">შესვლა</p>
+  <form
+    action="#"
+    class="login-form"
+    [formGroup]="formGroup"
+    (ngSubmit)="onLogin()"
+  >
+    <label for="email" class="email-label">ელ-ფოსტა</label>
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="Example@redberry.ge"
+      class="login-input"
+    />
+    <div *ngIf="showError" class="error">
+      <img src="../../../assets/images/info-circle.png" alt="error photo" />
+      <p>ელ-ფოსტა არ მოიძებნა</p>
+    </div>
+    <button class="submit-login">შესვლა</button>
+  </form>
+</div>

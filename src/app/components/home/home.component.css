@@ -1,0 +1,128 @@
+.home-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 150px;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.home-content h1 {
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.categories-buttons {
+  margin-top: 100px;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  overflow-x: scroll;
+  margin: 70px auto 0 auto;
+}
+
+.category-button {
+  border: 2px solid transparent;
+  padding: 8px 16px;
+  border-radius: 30px;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  min-width: min-content;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.category-box {
+  display: flex;
+  gap: 24px;
+  width: 80%;
+  overflow-x: scroll;
+  margin: 70px auto 0 auto;
+}
+
+.blogs-box {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.blog {
+  width: 408px;
+  height: 620px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.author-date-box {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.blog-image {
+  width: 408px;
+  height: 328px;
+  border-radius: 10px;
+}
+
+.blog-author {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.blog-date {
+  font-size: 12px;
+  font-weight: 400;
+  color: #85858d;
+}
+
+.category-div button {
+  margin-bottom: 21px;
+  margin-right: 16px;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.blog-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  height: 56px;
+}
+
+.blog-description {
+  color: rgba(64, 64, 73, 1);
+  word-break: break-all;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit the content to two lines */
+  -webkit-box-orient: vertical;
+  margin-bottom: 20px;
+}
+
+.see-more-button {
+  text-decoration: none;
+}
+
+.see-more-div {
+  display: flex;
+  align-items: center;
+}
+
+.see-more-div a {
+  color: #5d37f3;
+  text-decoration: none;
+}
+
+.arrow-image {
+  position: relative;
+  top: 5px;
+}

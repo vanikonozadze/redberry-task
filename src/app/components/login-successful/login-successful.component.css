@@ -1,0 +1,56 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  position: relative;
+  font-family: "FiraGo", sans-serif;
+  width: 480px;
+  height: 272px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.exit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.success-content {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.success-content p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.ok-button {
+  font-family: "FiraGo", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  width: 432px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #5d37f3;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}

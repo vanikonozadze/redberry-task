@@ -1,0 +1,27 @@
+<nav class="header">
+  <div class="main-header">
+    <img
+      src="../../../assets/images/LOGO-02 3.png"
+      alt="redberry logo"
+      routerLink=""
+      class="redberry-logo"
+    />
+    <button
+      class="login-button"
+      *ngIf="!this.blogsService.showLoggedInUser"
+      (click)="toggleLoginDialog()"
+    >
+      შესვლა
+    </button>
+    <button
+      class="add-blog-button"
+      *ngIf="this.blogsService.showLoggedInUser"
+      [routerLink]="'/add-blog'"
+    >
+      დაამატე ბლოგი
+    </button>
+  </div>
+</nav>
+
+<app-login-dialog *ngIf="blogsService.showDialog"></app-login-dialog>
+<app-login-successful *ngIf="blogsService.showSuccess"></app-login-successful>

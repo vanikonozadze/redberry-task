@@ -1,0 +1,43 @@
+.header {
+  border-bottom: 1px solid #e4e3eb;
+  background-color: #fff;
+  height: 80px;
+}
+
+.main-header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translate(0%, 50%);
+}
+
+.redberry-logo {
+  cursor: pointer;
+}
+
+.login-button {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #5d37f3;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-blog-button {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #5d37f3;
+  padding: 10px 20px 10px 20px;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,112 @@
+<app-add-blog-header></app-add-blog-header>
+
+<div class="add-blog-container">
+  <img
+    src="../../../assets/images/Arrow.png"
+    alt="back photo"
+    [routerLink]="'/blogs'"
+    class="back-button"
+  />
+  <form #form="ngForm" (ngSubmit)="addBlog()" class="add-blog-box">
+    <h1>ბლოგის დამატება</h1>
+    <div class="add-image-box">
+      <p class="add-image-box-p">ატვირთეთ ფოტო</p>
+      <img
+        src="../../../assets/images/folder-add.png"
+        alt="folder image"
+        class="folder-image"
+      />
+      <input
+        type="file"
+        id="image"
+        name="image"
+        (change)="onFileSelected($event)"
+        accept="image/*"
+      />
+      <label for="image" class="file-label">
+        ჩააგდეთ ფაილი აქ ან აირჩიეთ ფაილი</label
+      >
+    </div>
+    <div class="author-title-box">
+      <div class="author-box">
+        <p>ავტორი *</p>
+        <input
+          type="text"
+          id="author"
+          name="author"
+          [(ngModel)]="addBlogData.author"
+          placeholder="შეიყვანეთ ავტორი"
+          class="author-input"
+        />
+        <ul>
+          <li>მინიმუმ 4 სიმბოლო</li>
+          <li>მინიმუმ ორი სიტყვა</li>
+          <li>მხოლოდ ქართული სიმბოლოები</li>
+        </ul>
+      </div>
+      <div class="title-box">
+        <p class="title-box-t">სათაური *</p>
+        <input
+          type="text"
+          id="title"
+          name="title"
+          [(ngModel)]="addBlogData.title"
+          placeholder="შეიყვანეთ სათაური"
+          class="input-title"
+        />
+        <p class="input-title-p">მინიმუმ 2 სიმბოლო</p>
+      </div>
+    </div>
+    <div class="desc-input-box">
+      <p class="desc-input-box-t">აღწერა *</p>
+      <input
+        type="text"
+        id="description"
+        name="description"
+        [(ngModel)]="addBlogData.description"
+        class="desc-input"
+        placeholder="შეიყვანეთ აღწერა"
+      />
+      <p class="desc-input-box-p">მინიმუმ 2 სიმბოლო</p>
+    </div>
+    <div class="date-category-box">
+      <div class="date-box">
+        <p>გამოქვეყნების თარიღი *</p>
+        <img
+          src="../../../assets/images/calendar.png"
+          alt="calendar image"
+          class="calendar-image"
+        />
+        <input
+          type="date"
+          id="publish_date"
+          name="publish_date"
+          [(ngModel)]="addBlogData.publish_date"
+          class="date-input"
+        />
+      </div>
+      <div class="category-box">
+        <p>კატეგორია *</p>
+        <select id="categories" name="categories" class="category-input">
+          <option [value]="addBlogData.id" *ngFor="let category of categories">
+            {{ category.title }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="email-box">
+      <p>ელ-ფოსტა</p>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="addBlogData.email"
+        placeholder="Example@redberry.ge"
+        class="email-input"
+      />
+    </div>
+    <div class="publish-button-container">
+      <button class="publish-button">გამოქვეყნება</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="home-content">
+  <h1>ბლოგი</h1>
+  <img src="../../../assets/images/Blog-1024x355 1.png" alt="redberry photo" />
+</div>
+<div class="blog-container">
+  <div class="categories-buttons">
+    <button
+      class="category-button"
+      *ngFor="let category of categories"
+      [ngStyle]="getStyle(category)"
+      (click)="categoriesClicked(category)"
+    >
+      {{ category.title }}
+    </button>
+  </div>
+  <div class="blogs-box">
+    <div class="blog" *ngFor="let blog of categoryFilter">
+      <img src="{{ blog.image }}" alt="" class="blog-image" />
+      <div class="author-date-box">
+        <p class="blog-author">{{ blog.author }}</p>
+        <p class="blog-date">{{ blog.publish_date }}</p>
+      </div>
+      <p class="blog-title">{{ blog.title }}</p>
+      <div class="category-div">
+        <button
+          class="category-btn"
+          *ngFor="let ctgr of blog.categories"
+          [ngStyle]="{
+            color: ctgr.text_color,
+            backgroundColor: ctgr.background_color
+          }"
+        >
+          {{ ctgr.title }}
+        </button>
+      </div>
+      <p class="blog-description">
+        {{ blog.description }}
+      </p>
+      <div class="see-more-div">
+        <a [routerLink]="'/blogs/' + blog.id"
+          >სრულად ნახვა
+          <img
+            src="../../../assets/images/Arrow (1).png"
+            alt="arrow photo"
+            class="arrow-image"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

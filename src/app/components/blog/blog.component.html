@@ -1,0 +1,68 @@
+<app-header></app-header>
+
+<div class="blog-container">
+  <img
+    src="../../../assets/images/Arrow.png"
+    alt="back photo"
+    [routerLink]="'/blogs'"
+    class="back-button"
+  />
+  <div class="blog-box">
+    <img src="{{ blog.image }}" alt="blog image" class="blog-image" />
+    <div class="blog-info">
+      <p class="blog-author">{{ blog.author }}</p>
+      <p class="blog-date-email">{{ blog.publish_date }} • {{ blog.email }}</p>
+      <p class="blog-title">{{ blog.title }}</p>
+    </div>
+    <button
+      class="category-button"
+      *ngFor="let ctgr of blog.categories"
+      [ngStyle]="{
+        backgroundColor: ctgr.background_color,
+        color: ctgr.text_color
+      }"
+    >
+      {{ ctgr.title }}
+    </button>
+    <p class="blog-desc">{{ blog.description }}</p>
+  </div>
+
+  <div class="related-blogs">
+    <h1>მსგავსი სტატიები</h1>
+    <div class="related-blog">
+      <div class="blog" *ngFor="let blog of getRelatedBlogs()">
+        <img src="{{ blog.image }}" alt="" class="blog-image" />
+        <div class="author-date-box">
+          <p class="blog-author">{{ blog.author }}</p>
+          <p class="blog-date">{{ blog.publish_date }}</p>
+        </div>
+        <p class="blog-title">{{ blog.title }}</p>
+        <div class="category-div">
+          <button
+            class="category-btn"
+            *ngFor="let ctgr of blog.categories"
+            [ngStyle]="{
+              color: ctgr.text_color,
+              backgroundColor: ctgr.background_color
+            }"
+          >
+            {{ ctgr.title }}
+          </button>
+        </div>
+        <p class="blog-description">
+          {{ blog.description }}
+        </p>
+        <div class="see-more-div">
+          <a [routerLink]="'/blogs/' + blog.id"
+            >სრულად ნახვა
+            <img
+              src="../../../assets/images/Arrow (1).png"
+              alt="arrow photo"
+              class="arrow-image"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
