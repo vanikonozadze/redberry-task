@@ -10,7 +10,7 @@ import { Category } from 'src/app/models/categorie.model';
 export class BlogsService {
   baseApiUrl: string = 'https://api.blog.redberryinternship.ge/api/';
   private token =
-    '908f302445d4975be1473a04c42bd4a005b0c0376489a8352ef20283bf6a82fb';
+    '546e33f418fcb1ef019f10df351d66680105b54271a5d51153467f3103ccc39c';
   showDialog = false;
   showSuccess = false;
   showLoggedInUser = false;
